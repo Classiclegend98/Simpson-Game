@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "Coming Soon", cursive, "Balsamiq Sans", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"),
+    url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  cursor: url("Assets/Cursors/Cursor1.cur"), auto;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#ffff00, #ff8000);
+}
+
+.page-title {
+  font-family: "Coming Soon", cursive;
+  font-weight: normal;
+  font-size: 5.5em;
+  color: #ffff00;
+  text-align: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.page-title span {
+  animation: bounce 2s ease infinite alternate;
+  display: inline-flex;
+  letter-spacing: -20px;
+}
+
+.page-title span:nth-child(1) {
+  animation-delay: 0s;
+}
+.page-title span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.page-title span:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.page-title span:nth-child(4) {
+  animation-delay: 2.25s;
+}
+.page-title span:nth-child(5) {
+  animation-delay: 1s;
+}
+.page-title span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+.page-title span:nth-child(7) {
+  animation-delay: 2.75s;
+}
+.page-title span:nth-child(8) {
+  animation-delay: 1.75s;
+}
+.page-title span:nth-child(9) {
+  animation-delay: 2s;
+}
+.page-title span:nth-child(10) {
+  animation-delay: 0.75s;
+}
+.page-title span:nth-child(11) {
+  animation-delay: 2.5s;
+}
+.page-title span:nth-child(12) {
+  animation-delay: 1.5s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+p img {
+  max-width: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-info {
+  font-family: "Coming Soon", cursive;
+  font-size: 2em;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  background-color: radial-gradient(#ffff00, #ff8000);
+  height: 175px;
+  width: 125px;
+}
+
+.card:hover {
+  cursor: url("Assets/Cursors/Cursor2.cur"), auto;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 2px;
+  transition: transform 800ms ease-in-out;
+}
+
+.card.visible .card-back {
+  transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+  transform: rotateY(0);
+}
+
+.card.matched .frontImage {
+  animation: dance 1s linear infinite 500ms;
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #ffff00;
+  font-family: "Coming Soon", cursive;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.overlay-text-small {
+  font-size: 0.4em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+#game-over-text img {
+  width: 70vh;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgb(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 5em;
+  }
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+}
+
+.card-back {
+  background-color: rgb(218, 195, 154);
+  border-color: black;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+.card-front:hover .frontImage {
+  transform: scale(1);
+}
+
+.frontImage {
+  position: absolute;
+  transform: scale(0.9);
+  width: 65%;
+  transition: transform 100ms ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-face:hover .arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.arrow-top-left {
+  top: 0;
+  left: 0;
+}
+
+.arrow-top-right {
+  top: 0;
+  right: 0;
+}
+
+.arrow-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.arrow-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.backImage {
+  /* align-self: flex-start; */
+  position: absolute;
+  left: 2px;
+  transform: scale(0.9);
+  width: 85%;
+  transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .backImage {
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay-text {
+    font-size: 1rem;
+  }
+
+  .page-title {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+}

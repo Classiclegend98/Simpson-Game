@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Assets/Images/Home.ico" />
+    <script src="script.js" async></script>
+    <title>Mix-Or-Match</title>
+  </head>
+  <body>
+    <h1 class="page-title">
+      <span>M</span>
+      <span>i</span>
+      <span>x</span>
+      <span>-</span>
+      <span>O</span>
+      <span>r</span>
+      <span>-</span>
+      <span>M</span>
+      <span>a</span>
+      <span>t</span>
+      <span>c</span>
+      <span>h</span>
+    </h1>
+    <p id="simpsons">
+      <img src="Assets/Images/TheSimpsons.png" alt="" />
+    </p>
+    <div class="overlay-text visible"><span>Click to Start</span></div>
+    <div id="game-over-text" class="overlay-text">
+      <span>GAME OVER</span>
+      <span class="overlay-text-small">Click to restart</span>
+      <img src="Assets/Images/Loser.png" alt="" />
+    </div>
+    <div id="victory-text" class="overlay-text">
+      <span>GREAT JOB!</span>
+      <br />
+      <span class="overlay-text-small">Click to restart</span>
+      <img src="Assets/Images/Victory.png" alt="" />
+    </div>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">Time <span id="time-remaining">100</span></div>
+        <div class="game-info">Flips <span id="flips">0</span></div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Apu.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Abraham.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Bart.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Homer.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Krusty.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Lisa.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Marge.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Moe.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Apu.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Abraham.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Bart.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Homer.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Krusty.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Lisa.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Marge.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="backImage" src="Assets/Images/Face.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="arrow arrow-top-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-top-right" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-left" src="Assets/Images/Arrow.png" />
+          <img class="arrow arrow-bottom-right" src="Assets/Images/Arrow.png" />
+          <img class="frontImage" src="Assets/Images/Moe.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
