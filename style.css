@@ -175,6 +175,11 @@ p img {
   width: 70vh;
 }
 
+#lisa {
+  width: 15%;
+  height: 50%;
+}
+
 @keyframes overlay-grow {
   from {
     background-color: rgb(0, 0, 0, 0);
