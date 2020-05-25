@@ -164,6 +164,12 @@ p img {
   font-size: 0.4em;
 }
 
+img#lisa {
+  margin: 0;
+  padding: 0;
+  height: 50%;
+}
+
 .overlay-text.visible {
   display: flex;
   flex-wrap: wrap;
@@ -172,12 +178,7 @@ p img {
 }
 
 #game-over-text img {
-  width: 70vh;
-}
-
-#lisa {
-  width: 15%;
-  height: 50%;
+  width: 50vh;
 }
 
 @keyframes overlay-grow {
